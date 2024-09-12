@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .slider {
+        height: 100vh;
+        width: auto;
+        position: relative;
+        background-color: black;
+      }
+      .slides {
+        height: 400px;
+        width: auto;
+        /* border: 2px solid wheat; */
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .slider img {
+        width: 100%;
+        display: none;
+      }
+      .slides img {
+        height: 250px;
+        width: 250px;
+        margin-top: 100px;
+        /* display: block; */
+      }
+      img.displaySlide {
+        display: block;
+      }
+      .btn {
+        height: 50px;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        gap: 150px;
+      }
+      button {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="slider">
+      <div class="slides">
+        <img class="slide" src="../javascript.assi/gold-shiny-background-with-variating-hues_1258-85473.avif" alt="Image #1" />
+        <img class="slide" src="../javascript.assi/image.png" alt="Image #2" />
+        <img class="slide" src="../javascript.assi/blue-gradient-abstract-background-empty-room-with-space-your-text-picture_1258-57682.jpg" alt="Image #3" />
+        <img class="slide" src="../javascript.assi/210-2107430_color-boxes-light-green-green.png" alt="Image #4" />
+        <img class="slide" src="../javascript.assi/light-blue-color-toned-square-sheet-paper_696657-29418.avif  " alt="Image #5" />
+      </div>
+
+      <div class="btn">
+        <button id="backBtn" onclick="prevSlide()">←</button>
+        <button id="nextBtn" onclick="nextSlide()">→</button>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script>
+    const slides = document.querySelectorAll(".slides img");
+    let slideIndex = 0;
+
+    document.addEventListener("DOMContentLoaded", initializeSlider);
+
+    function initializeSlider() {
+      if (slides.length > 0) {
+        slides[slideIndex].classList.add("displaySlide");
+      }
+    }
+    function showSlide(index) {
+      if (index >= slides.length) {
+        slideIndex = 0;
+      } else if (index < 0) {
+        slideIndex = slides.length - 1;
+      }
+
+      slides.forEach((slide) => {
+        slide.classList.remove("displaySlide");
+      });
+      slides[slideIndex].classList.add("displaySlide");
+    }
+    function prevSlide() {
+      slideIndex--;
+      showSlide(slideIndex);
+    }
+    function nextSlide() {
+      slideIndex++;
+      showSlide(slideIndex);
+    }
+  </script>
+</html>

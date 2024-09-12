@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            height: auto;
+            width: auto;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <table cellpadding="10px">
+            <tr>
+                <td>
+                    1.C language
+                </td>
+                <td>
+                    <input type="text" name="" id="a" value="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    2.C++ language
+                </td>
+                <td>
+                    <input type="text" name="" id="b" value="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    3.DataBase
+                </td>
+                <td>
+                    <input type="text" name="" id="c" value="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    4.HTML
+                </td>
+                <td>
+                    <input type="text" name="" id="d" value="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    5.CSS
+                </td>
+                <td>
+                    <input type="text" name="" id="e" value="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    6.PHP
+                </td>
+                <td>
+                    <input type="text" name="" id="f" value="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    7.Core java
+                </td>
+                <td>
+                    <input type="text" name="" id="g" value="">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button onclick="SUM()">Result</button></td>
+            </tr>
+            <tr>
+                <td>
+                    total is: <span id="h"></span> / 350
+                </td>
+                <td>
+                    percentage is : <span id="i"></span>%
+                </td>
+            </tr>
+        </table>
+
+
+    </div>
+</body>
+<script>
+   function SUM(){
+    var val = document.getElementById("a").value
+    var val1 = document.getElementById("b").value
+    var val2 = document.getElementById("c").value
+    var val3 = document.getElementById("d").value
+    var val4 = document.getElementById("e").value
+    var val5 = document.getElementById("f").value
+    var val6 = document.getElementById("g").value
+
+    var sum = +val + +val1 + +val2 + +val3 + +val4 + +val5 + +val6
+
+    document.getElementById("h").innerHTML= sum
+    document.getElementById("i").innerHTML= (sum*100)/350
+
+    // console.log(sum)
+   }
+</script>
+
+</html>

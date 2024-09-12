@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Enter First Number : <input type="text" name="" id="one" value=""><br><br>
+    Enter Second Number : <input type="text" name="" id="two" value=""><br><br>
+    <button onclick="Add()">+</button>
+    <button>-</button>
+    <button>*</button>
+    <button>/</button>
+    <button>%</button>
+    Answer is : <span id="th"></span>
+
+</body>
+<script>
+
+
+    function Add() {
+        
+        var val = document.getElementById("one").value
+        var val1 = document.getElementById("two").value
+        document.getElementById("th").innerHTML = +val + +val1
+    }
+</script>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #main {
+            height: 600px;
+            width: auto;
+            background-color: purple;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        button {
+            height: 70px;
+            width: 300px;
+            background-color:lightgreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <button onclick="change()">CHANGE BG COLOR</button>
+    </div>
+</body>
+<script>
+
+    function change() {
+        var value = document.getElementById("main")
+
+        if (value.style.backgroundColor == "purple") {
+            value.style.backgroundColor = "royalblue"
+
+        }
+        else {
+            value.style.backgroundColor = "purple"
+        }
+
+    }
+</script>
+
+</html>
